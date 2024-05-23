@@ -1,18 +1,9 @@
-const express = require('express')
-require('dotenv').config()
-const db = require("./app/models/index.js");
-const app = express()
-const port = process.env.PORT
+require("dotenv").config();
 
-db.sequelize
-.authenticate()
-.then(() => console.log("Database connected ..."))
-.catch((err) => console.log(err));
+const app = require("./app.js");
 
-app.get('/', (req, res) => {
-  res.send('Hello World !')
-})
+const port = process.env.PORT;
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+  console.log(`Example app listening on port ${port}`);
+});
