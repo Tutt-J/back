@@ -9,4 +9,4 @@ RUN npm install -g nodemon
 
 EXPOSE ${PORT}
 
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "start"]

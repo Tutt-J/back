@@ -10,7 +10,7 @@ db.sequelize
 .catch((err) => console.log(err));
 
 app.get('/', (req, res) => {
-  res.send('Hello World !')
+  res.send('Hello World 5!')
 })
 
 app.listen(port, () => {
