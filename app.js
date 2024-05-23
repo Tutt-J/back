@@ -11,7 +11,7 @@ db.sequelize
 
 app.use(
   cors({
-    origin: "http://localhost:8080", // Allow requests from your frontend origin
+    origin: process.env.ORIGIN,
   })
 );
 
