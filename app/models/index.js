@@ -6,16 +6,14 @@ const Sequelize = require('sequelize');
 const process = require('process');
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
-console.log(env);
 const config = require(__dirname + '/../config/config.js')[env];
 const db = {};
 
 let sequelize;
 if (config.use_env_variable) {
-  console.log('ici');
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
-  console.log('la');
+  console.log(config);
 
   sequelize = new Sequelize(config.database, config.username, config.password, {
     host: config.host,
